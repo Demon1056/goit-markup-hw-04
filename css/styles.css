@@ -5,7 +5,7 @@
       --second-text-color:#FFFFFF;
       --main-hover-focus-color: #2196F3;  
       --portfolio-btn-text-color: #212121;
-      --portfolio-btn-background-color:#F5F4FA;
+      --second-background-color:#F5F4FA;
       --header-link-color:#212121;
       --main-logo-color: #2196F3;
       --header-border-color: #ECECEC;
@@ -147,7 +147,8 @@ padding-top: 200px;
 padding-bottom: 200px;
 background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../image/bgimg.jpg);
 background-repeat: no-repeat;
-max-width: 1600px;
+background-size: 1600px;
+background-position: center;
 margin: 0 auto;
 }
 
@@ -186,27 +187,14 @@ background: var(--main-hover-focus-color);
 display: flex;
 flex-basis: 270px;
 }
-.benefits-item::before {
-  content:"";
-  height: 120px ;
-   background-repeat: no-repeat;
-  background-color: #F5F4FA;
-  display: block;
-  background-position: 50% 50%;
-  background-size: 70px;
+.benefits-icon-area {
+  background-color: var(--second-background-color) ;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
-}
-.antenna::before { 
-  background-image: url(../image/benefits/antenna.svg);
-}
-.clock::before {
-   background-image: url(../image/benefits/clock.svg);
-}
-.diagram::before {
-  background-image: url(../image/benefits/diagram.svg);
-}
-.astronaut::before {
-  background-image: url(../image/benefits/astronaut.svg);
+  border-radius: 4px;
 }
 
 .benefits-item:not(:last-child){
@@ -312,10 +300,14 @@ color: var(--main-text-color);
 .network-icon{
   fill: var(--icon-color);
 }
-.network-link:hover {
+.network-link:hover,
+.network-link:focus
+{
   background-color: var(--main-hover-focus-color);
 }
-.network-link:hover .network-icon {
+
+.network-link:hover .network-icon,  
+.network-link:focus .network-icon{
   fill: var(--second-text-color);
   
 }
@@ -345,13 +337,15 @@ color: #212121;
   justify-content: center;
   align-items: center;
 }
-.partners-link:hover{
+.partners-link:hover,
+.partners-link:focus{
   border: 1px solid var(--main-hover-focus-color);
 }
 .partners-icon{
   fill:var(--icon-color);
   }
-  .partners-link:hover .partners-icon {
+  .partners-link:hover .partners-icon,
+  .partners-link:focus .partners-icon {
     fill: var(--main-hover-focus-color);
   }
 /* Подвал страницы */
@@ -362,7 +356,6 @@ background: var(--hero-footer-background-color);
 }
 .divide{
   display: flex;
-  justify-content: start;
   align-items: baseline;
 }
 .footer-address-side {
@@ -424,13 +417,14 @@ margin-bottom: 20px;
    margin-right: 8px;
  }
 .portfolio-btn {
+  padding: 6px 22px;
 font-family: Roboto, sans-serif;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.62;
 letter-spacing: 0.03em;
 color: var(--portfolio-btn-text-color);
-background-color: var(--portfolio-btn-background-color);
+background-color: var(--second-background-color);
 }
 
 .portfolio-btn:hover,
@@ -472,7 +466,10 @@ line-height: 1.88;
 letter-spacing: 0.03em;
 color: var(--main-text-color);
 }
-.portfolio-item-list:hover{
+.portfolio-link{
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus{
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
