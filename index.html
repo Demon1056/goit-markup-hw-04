@@ -24,7 +24,7 @@
                 <a href="index.html" class="header-logo link">
                     <span class="logo-web"> Web</span>Studio</a>
                 <ul class="header-list list">
-                    <li class="header-item"><a href="index.html" class="header-link link">Студия</a></li>
+                    <li class="header-item line"><a href="index.html" class="header-link line link">Студия</a></li>
                     <li class="header-item"><a href="./portfolio.html" class="header-link link">Портфолио</a></li>
                     <li class="header-item"><a href="" class="header-link link">Контакты</a></li>
                 </ul>
@@ -51,7 +51,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" class="hero-btn btn">Заказать услугу</button>
+                <button type="button" class="hero-btn btn" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <!--Привилегии компании-->
@@ -104,12 +104,17 @@
             <div class="container">
                 <h2 class="duties-title">Чем мы занимаемся</h2>
                 <ul class="duties-list list">
-                    <li class="duties-item"><a href=""><img src="image/duties/duties1.jpg" alt="печатающии руки"
-                                width="370"></a></li>
+                    <li class="duties-item"><a href="">
+                            <img src="image/duties/duties1.jpg" alt="печатающии руки" width="370">
+                            <h3 class="duties-up-text">Десктопные приложения</h3>
+                        </a></li>
                     <li class="duties-item"><a href=""><img src="image/duties/duties2.jpg" alt="обзор смартфона"
-                                width="370"></a></li>
-                    <li class="duties-item"><a href=""><img src="image/duties/duties3.jpg" alt="планшет"
-                                width="370"></a></li>
+                                width="370">
+                            <h3 class="duties-up-text">Мобильные приложения</h3>
+                        </a></li>
+                    <li class="duties-item"><a href=""><img src="image/duties/duties3.jpg" alt="планшет" width="370">
+                            <h3 class="duties-up-text">Дизайнерские решения</h3>
+                        </a></li>
                 </ul>
             </div>
         </section>
@@ -304,6 +309,14 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" data-modal-close><svg class="btn-icon" width="30" height="30">
+                <use href="./image/icon.svg#icon-close-3"></use>
+            </svg></button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
